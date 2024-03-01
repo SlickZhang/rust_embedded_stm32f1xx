@@ -1,0 +1,16 @@
+[package]
+name = "blinky"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ embedded-hal = "1.0.0"
+ nb = "1.0.0"
+ cortex-m = "0.7.6"
+ cortex-m-rt = "0.7.2"
+ panic-halt = "0.2.0"
+ 
+[dependencies.stm32f1xx-hal]
+ version = "0.10.0"
+ features = ["rt", "stm32f103", "medium"]
+

@@ -1,0 +1,11 @@
+[build]
+target = "thumbv7m-none-eabi"
+
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = 'gdbgui -g arm-none-eabi-gdb'
+
+[target.thumbv7m-none-eabi]
+runner = 'arm-none-eabi-gdb -q -x debug.gdb'
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
